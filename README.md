@@ -7,3 +7,112 @@ It's about:<br>
   Manage Invitations from other student who applied for Research and added you as a team mate<br>
   Accepting those applications from Faculty members<br>
   Accepting those application from Chairman Sir.<br>
+  
+=====================================================================================
+Some Student List for Successfully Login:
+
+StudentID	    Name		       StudentPass
+
+201510028 	Md. Ziaul Hoque 	 	201510028
+201510130 	Md. Rana Hossain 		201510130
+201510140 	Shihab Hossain 		 	201510140
+201520021 	Morshed Alam Raju 	 	201520021
+201610001 	Abdullah Al Jamil 	 	201610001
+201610003 	Tanvir Sojal 		 	201610003
+201610034 	Md. Akrabul Islam 	 	201610034
+201620058 	Atikur Rahman 		 	201620058
+201700037 	Anik Chakrabortty 	 	201700037
+
+=====================================================================================
+
+
+Some Faculty List for Successfully Login:	||	 Chairman	Pass 
+						||	    
+ FacultyInitial	          Faculty Pass		||	    SM		 SM
+						||
+	SM			SM		||
+	KMH			KMH		||
+	AHQ			AHQ		||
+	KIA			KIA		||
+	AR			AR		||
+
+======================================================================================
+
+Instructions to run this App:
+
+You need to change "USERNAME", "PASSWORD", "HOSTNAME" from the controller to successfully connect to the Database;
+
+# Student Part:
+
+	* After logged in to student Account there will be 
+		-> Dashboard
+		-> Registration
+		-> Apply for Research
+		-> Group Info
+		-> Log out
+
+	* In Registration Container Offered Courses are shown in the ListView. If 
+	  one have already registered for CSE4000 he/she cannot register again. 
+	  "Register" Button will be disabled for him/her.
+
+	* In Apply for Research Container a form have to fill for apply for apply
+	  for Research. "Apply" Button will be disabled for those are not 
+	  Registered for CSE4000. One can apply upto 3 Application for Research 
+	  After 3 application a Notification will popup that "You cannot apply 
+	  more than 3 time for research". There are three option for team mate but 
+	  it can also be done by 1 or 2 member. Also a student can see how many
+	  students are already enrolled with faculties in supervisor comboBox.
+
+	* In Group Info container all invitation will be listed when someone apply
+	  for Research and wished to be a team mate with Logged Student. Logged 
+	  Student can see all the invitations and Logged Student can confirm team
+	  for Research by selecting a team from a tableView. One cannot confirm
+	  any group before registering CSE4000. One Student can also see the application
+	  progress in this section.
+	
+	* Log out
+
+N.B. Student can apply for research before a deadline which will set by Chairman sir 
+before semester start. In my case you can see the deadlines for "Summer2019" and "Fall2019" 
+in database table named "deadline". If the deadline is over a notification will popup.
+
+=========================================================================================
+
+# Faculty Part:
+
+	* After Successfully logged in to Faculty Account
+		-> Dashboard
+		-> Applications
+		-> Students Info
+		-> Log out
+
+	* In Application container teacher will see how mane applications are requested to
+	  do Research under logged faculty supervision. Faculty can choose the semester and
+	  accept group which he/she prefer. It also have to done before a deadline. An 
+	  Application will only be listed under faculty application list when all the team
+	  mate confirmed there group.
+
+	* In Student Info section faculty will see all groups under him/her supervision and 
+	  also can see individuals students list.
+
+	* Log out.
+
+==========================================================================================
+
+# Chairman Sir Part:
+
+	* There are two option in this section
+		-> Applications
+		-> Set Deadline
+
+	* In Application section, Chairman sir will see all the applications and also all
+	  the "Confirmed Applications". Chairman sir can confirm any 
+	  "Confirmed Application" for final confirmation.
+
+	* Set Deadline: Chairman sir can select a semester (i.e Spring, Summer, Fall) and 
+	  choose the semesterStartDate and the semesterEndDate. It will automaticly 
+	  generate the semesterId like Spring2019/Fall2019 by LocalDate.now().getYear();
+	  Also Research Application Deadline, Faculty Approval Deadline and Application 
+	  Approval Deadline have to set by Chairman Sir.
+
+==========================================================================================
