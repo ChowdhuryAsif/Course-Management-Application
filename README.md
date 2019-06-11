@@ -1,9 +1,9 @@
 # Course-Management-Application
 
-It is a simple application using JavaFX.
-It's about:
-  Registering for a course named Research Methodology
-  Apply for Research
-  Manage Invitations from other student who applied for Research and added you as a team mate
-  Accepting those applications from Faculty members
-  Accepting those application from Chairman Sir
+It is a simple application using JavaFX.<br>
+It's about:<br>
+  Registering for a course named Research Methodology<br>
+  Apply for Research<br>
+  Manage Invitations from other student who applied for Research and added you as a team mate<br>
+  Accepting those applications from Faculty members<br>
+  Accepting those application from Chairman Sir.<br>
