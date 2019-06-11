@@ -8,9 +8,7 @@ It's about:<br>
   Accepting those applications from Faculty members<br>
   Accepting those application from Chairman Sir.<br>
   
-=====================================================================================
-=====================================================================================
-=====================================================================================
+===================================================================
 
 Instructions to run this App:<br>
 
@@ -50,7 +48,7 @@ N.B. Student can apply for research before a deadline which will set by Chairman
 before semester start. In my case you can see the deadlines for "Summer2019" and "Fall2019" 
 in database table named "deadline". If the deadline is over a notification will popup.
 
-=========================================================================================
+====================================================================
 
 # Faculty Part:
 
@@ -71,7 +69,7 @@ in database table named "deadline". If the deadline is over a notification will 
 
 	* Log out.
 
-==========================================================================================
+===================================================================
 
 # Chairman Sir Part:
 
@@ -89,4 +87,4 @@ in database table named "deadline". If the deadline is over a notification will 
 	  Also Research Application Deadline, Faculty Approval Deadline and Application 
 	  Approval Deadline have to set by Chairman Sir.
 
-==========================================================================================
+====================================================================
