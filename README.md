@@ -9,38 +9,12 @@ It's about:<br>
   Accepting those application from Chairman Sir.<br>
   
 =====================================================================================
-Some Student List for Successfully Login:
-
-StudentID	    Name		       StudentPass
-
-201510028 	Md. Ziaul Hoque 	 	201510028
-201510130 	Md. Rana Hossain 		201510130
-201510140 	Shihab Hossain 		 	201510140
-201520021 	Morshed Alam Raju 	 	201520021
-201610001 	Abdullah Al Jamil 	 	201610001
-201610003 	Tanvir Sojal 		 	201610003
-201610034 	Md. Akrabul Islam 	 	201610034
-201620058 	Atikur Rahman 		 	201620058
-201700037 	Anik Chakrabortty 	 	201700037
-
+=====================================================================================
 =====================================================================================
 
+Instructions to run this App:<br>
 
-Some Faculty List for Successfully Login:	||	 Chairman	Pass 
-						||	    
- FacultyInitial	          Faculty Pass		||	    SM		 SM
-						||
-	SM			SM		||
-	KMH			KMH		||
-	AHQ			AHQ		||
-	KIA			KIA		||
-	AR			AR		||
-
-======================================================================================
-
-Instructions to run this App:
-
-You need to change "USERNAME", "PASSWORD", "HOSTNAME" from the controller to successfully connect to the Database;
+You need to change "USERNAME", "PASSWORD", "HOSTNAME" from the controller to successfully connect to the Database;<br>
 
 # Student Part:
 
