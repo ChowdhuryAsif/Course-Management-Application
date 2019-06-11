@@ -1,0 +1,1700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="600.0" prefHeight="600.0" prefWidth="896.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="course.management.app.FXMLDocumentController">
+   <children>
+      <BorderPane fx:id="mainPane" minHeight="600.0" prefHeight="600.0" prefWidth="700.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #1fd2a1;" BorderPane.alignment="CENTER" />
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #1fd2a1;" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <GridPane BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="5.0" prefHeight="5.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="5.0" prefHeight="5.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="5.0" prefHeight="5.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="5.0" prefHeight="5.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="studentButton" mnemonicParsing="false" onAction="#handleLoginButtonAction" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #289b64;" text="Student" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="SansSerif Regular" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="facultyButton" mnemonicParsing="false" onAction="#handleLoginButtonAction" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #9b2869;" text="Faculty" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="SansSerif Regular" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="chairmanButton" mnemonicParsing="false" onAction="#handleLoginButtonAction" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #287896;" text="Chairman" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="SansSerif Regular" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label style="-fx-text-fill: #0e5781;" text="Welcome to Course Manangement App" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+      <AnchorPane fx:id="studentPane" minHeight="600.0" prefHeight="600.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane fx:id="studentLoginPane" minHeight="600.0" prefHeight="600.0" prefWidth="700.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #1fd2a1;" BorderPane.alignment="CENTER" />
+               </top>
+               <bottom>
+                  <AnchorPane prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #1fd2a1;" BorderPane.alignment="CENTER" />
+               </bottom>
+               <center>
+                  <GridPane BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <GridPane GridPane.rowIndex="2">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextField fx:id="studentIDField" alignment="CENTER" maxHeight="40.0" maxWidth="300.0" prefHeight="40.0" prefWidth="300.0" promptText="Student ID" GridPane.halignment="CENTER">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="15.0" />
+                                 </font>
+                              </TextField>
+                              <PasswordField fx:id="studentPassField" alignment="CENTER" maxHeight="40.0" maxWidth="300.0" prefHeight="40.0" prefWidth="300.0" promptText="Password" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="15.0" />
+                                 </font>
+                              </PasswordField>
+                           </children>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="3">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#handleStudentLoginButtonAction" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #289b64;" text="Login" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#handleStudentPassForgotButtonAction" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #9b2869;" text="Forgot Password" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button layoutX="10.0" layoutY="65.0" mnemonicParsing="false" onAction="#handleHomeButtonAction" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #287896;" text="Back to Home" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </GridPane>
+                        <Label style="-fx-text-fill: #0e5781;" text="Welcome to CM App" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="SansSerif Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="163.0" layoutY="66.0" style="-fx-text-fill: #8c8c8c;" text="Use your Student ID and Password to login" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <font>
+                              <Font name="SansSerif Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="studentDashBoardPane" prefHeight="600.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #2d353c;" BorderPane.alignment="CENTER">
+                     <children>
+                        <GridPane layoutX="350.0" layoutY="15.0" prefHeight="60.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label fx:id="studentNameStatus" alignment="CENTER_RIGHT" minHeight="25.0" prefHeight="25.0" prefWidth="180.0" text="Student Name" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <GridPane.margin>
+                                    <Insets right="20.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label fx:id="studentIdStatus" alignment="CENTER_RIGHT" layoutX="530.0" layoutY="15.0" minHeight="25.0" prefHeight="25.0" prefWidth="180.0" text="Student ID" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <GridPane.margin>
+                                    <Insets right="20.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label fx:id="paneStatus" graphicTextGap="10.0" minHeight="25.0" prefHeight="25.0" prefWidth="180.0" style="-fx-text-fill: #0ff0d8;" text="Pane Status" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowSpan="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="16.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="20.0" />
+                                 </GridPane.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/001-menu.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #2d353c;" BorderPane.alignment="CENTER">
+                     <children>
+                        <GridPane layoutX="41.0" layoutY="80.0" minHeight="300.0" prefHeight="300.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button fx:id="studentRegistration" alignment="BASELINE_LEFT" contentDisplay="RIGHT" graphicTextGap="55.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleStudentMenuButtonAction" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #353f47;" text="Registration" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="SansSerif Regular" size="15.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/001-check-form.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="studentDashboard" alignment="BASELINE_LEFT" contentDisplay="RIGHT" graphicTextGap="61.0" layoutY="79.0" mnemonicParsing="false" onAction="#handleStudentMenuButtonAction" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #353f47;" text="Dashboard" textFill="WHITE" GridPane.halignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="SansSerif Regular" size="15.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/005-dashboard.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="studentApplication" alignment="BASELINE_LEFT" contentDisplay="RIGHT" graphicTextGap="7.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleStudentMenuButtonAction" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #353f47;" text="Apply for Research" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="SansSerif Regular" size="15.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/008-form.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="studentLogOut" alignment="BASELINE_LEFT" contentDisplay="RIGHT" graphicTextGap="83.0" layoutY="133.0" mnemonicParsing="false" onAction="#handleStudentMenuButtonAction" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #353f47;" text="Log out" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="SansSerif Regular" size="15.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/004-power-button-off.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="studentGroupInfo" alignment="BASELINE_LEFT" contentDisplay="RIGHT" graphicTextGap="63.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleStudentMenuButtonAction" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #353f47;" text="Group Info" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="SansSerif Regular" size="15.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/006-information.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane fx:id="container" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="dashboardContainer" layoutX="120.0" layoutY="157.0" prefHeight="540.0" prefWidth="500.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="169.0" layoutY="221.0" text="dashboard" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="registrationContainer" prefHeight="540.0" prefWidth="500.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <GridPane layoutX="99.0" layoutY="180.0" prefHeight="540.0" prefWidth="500.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="300.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="127.0" minWidth="10.0" prefWidth="88.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="300.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="327.0" minHeight="10.0" prefHeight="324.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Offered Course" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Registered Course" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ListView fx:id="offeredCourseListView" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                                       </GridPane.margin>
+                                    </ListView>
+                                    <ListView fx:id="registeredCourseListView" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                                       </GridPane.margin>
+                                    </ListView>
+                                    <Button fx:id="courseRegisterButton" mnemonicParsing="false" onAction="#handleCourseRegisterButtonAction" prefWidth="200.0" style="-fx-background-color: #289b64;" text="Register" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="15.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="applicationContainer" prefHeight="540.0" prefWidth="696.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="413.0" minWidth="10.0" prefWidth="340.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="455.0" minWidth="10.0" prefWidth="340.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label style="-fx-text-fill: #0e5781;" text="Application for Research" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font name="SansSerif Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Research Topic Name:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                                       <font>
+                                          <Font name="SansSerif Bold" size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="20.0" right="10.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="102.0" text="Applicant 1 Name:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                                       <font>
+                                          <Font name="SansSerif Bold" size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="20.0" right="10.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="168.0" text="Applicant 2 Name:" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                                       <font>
+                                          <Font name="SansSerif Bold" size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="20.0" right="10.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="275.0" text="Applicant 3 Name:" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                                       <font>
+                                          <Font name="SansSerif Bold" size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="20.0" right="10.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <TextField fx:id="researchTopicNameField" prefHeight="30.0" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="20.0" right="10.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <ComboBox fx:id="facultyComboBox" prefWidth="150.0" promptText="Select Supervisor" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <GridPane.margin>
+                                          <Insets left="10.0" right="20.0" />
+                                       </GridPane.margin>
+                                    </ComboBox>
+                                    <Label text="Supervisor:" GridPane.halignment="LEFT" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font name="SansSerif Bold" size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="20.0" right="10.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Button mnemonicParsing="false" onAction="#handleResetButtonAction" style="-fx-background-color: #9b2869;" text="Reset" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <GridPane.margin>
+                                          <Insets left="100.0" />
+                                       </GridPane.margin>
+                                    </Button>
+                                    <Button fx:id="applyConfirmButton" layoutX="181.0" layoutY="464.0" mnemonicParsing="false" onAction="#handleApplyConfirmButtonAction" style="-fx-background-color: #289b64;" text="Apply &amp; Send Confirmation" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <GridPane.margin>
+                                          <Insets right="20.0" />
+                                       </GridPane.margin>
+                                    </Button>
+                                    <TextField fx:id="applicant1NameField" prefHeight="30.0" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="20.0" right="10.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <TextField fx:id="applicant1IdField" prefHeight="30.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="10.0" right="20.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <Label layoutX="10.0" layoutY="136.0" text="Applicant 1 Student ID:" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                                       <font>
+                                          <Font name="SansSerif Bold" size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <TextField fx:id="applicant2NameField" prefHeight="30.0" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="20.0" right="10.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <TextField fx:id="applicant2IdField" prefHeight="30.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="10.0" right="20.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <Label layoutX="348.0" layoutY="130.0" text="Applicant 2 Student ID:" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                                       <font>
+                                          <Font name="SansSerif Bold" size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <TextField fx:id="applicant3NameField" prefHeight="30.0" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="20.0" right="10.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <TextField fx:id="applicant3IdField" prefHeight="30.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="10.0" right="20.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <Label layoutX="348.0" layoutY="240.0" text="Applicant 3 Student ID:" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                                       <font>
+                                          <Font name="SansSerif Bold" size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label layoutX="368.0" layoutY="160.0" text="Semester:" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="SansSerif Bold" size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <ComboBox fx:id="semesterComboBoxST" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets right="20.0" />
+                                       </GridPane.margin>
+                                    </ComboBox>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="groupInfoContainer" prefHeight="540.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <GridPane layoutX="143.0" layoutY="74.0" prefHeight="540.0" prefWidth="500.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="175.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="345.0" minHeight="10.0" prefHeight="345.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <AnchorPane maxHeight="200.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #68bafc;">
+                                       <GridPane.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </GridPane.margin>
+                                       <children>
+                                          <Button layoutY="104.0" maxHeight="30.0" mnemonicParsing="false" onAction="#handleInvitationsButtomAction" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #3192e1;" text="See All Invitations" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <font>
+                                                <Font name="SansSerif Regular" size="15.0" />
+                                             </font>
+                                          </Button>
+                                          <Label alignment="CENTER" layoutX="55.0" layoutY="56.0" text="Invitations" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="55.0">
+                                             <font>
+                                                <Font name="SansSerif Regular" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="invitationCount" layoutX="55.0" layoutY="23.0" text="Count" textFill="WHITE" AnchorPane.leftAnchor="55.0">
+                                             <font>
+                                                <Font name="SansSerif Regular" size="25.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="200.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f97bb2;" GridPane.columnIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </GridPane.margin>
+                                       <children>
+                                          <Button layoutY="105.0" maxHeight="30.0" mnemonicParsing="false" onAction="#handleAcceptedApplicationButton" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #e42a7b;" text="See Team Status" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <font>
+                                                <Font name="SansSerif Regular" size="15.0" />
+                                             </font>
+                                          </Button>
+                                          <Label alignment="CENTER" layoutX="92.0" layoutY="56.0" text="Team Status" textAlignment="CENTER" textFill="WHITE">
+                                             <font>
+                                                <Font name="SansSerif Regular" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="invitationListPane" prefHeight="200.0" prefWidth="200.0" visible="false" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                       <children>
+                                          <GridPane layoutX="153.0" layoutY="58.0" prefHeight="345.0" prefWidth="480.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="220.0" prefHeight="220.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Button fx:id="invitationConfirmButton" mnemonicParsing="false" onAction="#invitationConfirmButtonAction" style="-fx-background-color: #289b64;" text="Confirm Group" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font name="SansSerif Regular" size="12.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                   <GridPane.margin>
+                                                      <Insets right="50.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Label prefHeight="30.0" prefWidth="200.0" style="-fx-text-fill: #0e5781;" text="Invitation List:">
+                                                   <font>
+                                                      <Font name="SansSerif Bold" size="15.0" />
+                                                   </font>
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <TableView fx:id="invitationTableView" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                                  <columns>
+                                                    <TableColumn fx:id="researchTopicName" prefWidth="95.0" text="Topic Name" />
+                                                    <TableColumn fx:id="mem1Name" prefWidth="95.0" text="Member1" />
+                                                      <TableColumn fx:id="mem1Status" prefWidth="50.0" text="Status" />
+                                                      <TableColumn fx:id="mem2Name" prefWidth="95.0" text="Member2" />
+                                                      <TableColumn fx:id="mem2Status" prefWidth="50.0" text="Status" />
+                                                      <TableColumn fx:id="mem3Name" prefWidth="95.0" text="Member3" />
+                                                      <TableColumn fx:id="mem3Status" prefWidth="50.0" text="Status" />
+                                                      <TableColumn fx:id="supervisorName" prefWidth="95.0" text="Supervisor" />
+                                                      <TableColumn fx:id="supervisorStatus" prefWidth="50.0" text="Status" />
+                                                  </columns>
+                                                </TableView>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="accApplicationPane" layoutX="10.0" layoutY="185.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                       <children>
+                                          <GridPane layoutX="153.0" layoutY="58.0" prefHeight="345.0" prefWidth="480.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="220.0" prefHeight="220.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label prefHeight="30.0" prefWidth="280.0" style="-fx-text-fill: #0e5781;" text="Accepted Application Details:" GridPane.halignment="LEFT">
+                                                   <font>
+                                                      <Font name="SansSerif Bold" size="15.0" />
+                                                   </font>
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <TableView fx:id="teamStatusTableView" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                                  <columns>
+                                                    <TableColumn fx:id="teamResearchTopicName" prefWidth="140.0" text="Research Topic Name" />
+                                                      <TableColumn fx:id="teamMemOneName" prefWidth="107.0" text="Member 1 Name" />
+                                                      <TableColumn fx:id="teamMemTwoName" prefWidth="107.0" text="Member 2 Name" />
+                                                      <TableColumn fx:id="teamMemThreeName" prefWidth="107.0" text="Member 3 Name" />
+                                                      <TableColumn fx:id="teamFacultyStatus" prefWidth="107.0" text="Faculty Status" />
+                                                      <TableColumn fx:id="teamChairmanStatus" prefWidth="107.0" text="Chairman Status" />
+                                                  </columns>
+                                                </TableView>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="facultyPane" layoutX="10.0" layoutY="10.0" minHeight="600.0" prefHeight="600.0" prefWidth="896.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane fx:id="facultyLoginPane" minHeight="600.0" prefHeight="600.0" prefWidth="700.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #1fd2a1;" BorderPane.alignment="CENTER" />
+               </top>
+               <bottom>
+                  <AnchorPane prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #1fd2a1;" BorderPane.alignment="CENTER" />
+               </bottom>
+               <center>
+                  <GridPane BorderPane.alignment="CENTER">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <GridPane GridPane.rowIndex="2">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TextField fx:id="facultyInitialField" alignment="CENTER" maxHeight="40.0" maxWidth="300.0" prefHeight="40.0" prefWidth="300.0" promptText="Faculty Intitials" GridPane.halignment="CENTER">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="15.0" />
+                                 </font>
+                              </TextField>
+                              <PasswordField fx:id="facultyPassField" alignment="CENTER" maxHeight="40.0" maxWidth="300.0" prefHeight="40.0" prefWidth="300.0" promptText="Password" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="15.0" />
+                                 </font>
+                              </PasswordField>
+                           </children>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="3">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#handleFacultyLoginButtonAction" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #289b64;" text="Login" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#handleFacultyPassForgotButtonAction" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #9b2869;" text="Forgot Password" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button layoutX="10.0" layoutY="65.0" mnemonicParsing="false" onAction="#handleHomeButtonAction" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #287896;" text="Back to Home" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </GridPane>
+                        <Label style="-fx-text-fill: #0e5781;" text="Welcome to CM App" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="SansSerif Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="163.0" layoutY="66.0" style="-fx-text-fill: #8c8c8c;" text="Use Faculty Initials and Password to login" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <font>
+                              <Font name="SansSerif Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="facultyDashboardPane" prefHeight="600.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #2d353c;" BorderPane.alignment="CENTER">
+                     <children>
+                        <GridPane layoutX="350.0" layoutY="15.0" prefHeight="60.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="facultyNameStatus" alignment="CENTER_RIGHT" minHeight="25.0" prefHeight="25.0" prefWidth="180.0" text="Faculty Name" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <GridPane.margin>
+                                    <Insets right="20.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label fx:id="facultyInitialsStatus" alignment="CENTER_RIGHT" layoutX="530.0" layoutY="15.0" minHeight="25.0" prefHeight="25.0" prefWidth="180.0" text="Faculty Initial" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <GridPane.margin>
+                                    <Insets right="20.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label fx:id="paneStatusFaculty" graphicTextGap="10.0" minHeight="25.0" prefHeight="25.0" prefWidth="180.0" style="-fx-text-fill: #0ff0d8;" text="Pane Status" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowSpan="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="16.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="20.0" />
+                                 </GridPane.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/001-menu.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #2d353c;" BorderPane.alignment="CENTER">
+                     <children>
+                        <GridPane layoutX="41.0" layoutY="80.0" minHeight="242.0" prefHeight="242.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Button fx:id="facultyApplicationsButton" alignment="BASELINE_LEFT" contentDisplay="RIGHT" graphicTextGap="55.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleFacultyMenuButtonAction" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #353f47;" text="Applications" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="SansSerif Regular" size="15.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/008-form.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="facultyDashboardButton" alignment="BASELINE_LEFT" contentDisplay="RIGHT" graphicTextGap="61.0" layoutY="79.0" mnemonicParsing="false" onAction="#handleFacultyMenuButtonAction" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #353f47;" text="Dashboard" textFill="WHITE" GridPane.halignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="SansSerif Regular" size="15.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/005-dashboard.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="facultyLogOutButton" alignment="BASELINE_LEFT" contentDisplay="RIGHT" graphicTextGap="83.0" layoutY="133.0" mnemonicParsing="false" onAction="#handleFacultyMenuButtonAction" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #353f47;" text="Log out" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="SansSerif Regular" size="15.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/004-power-button-off.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="facultyStudentsInfoButton" alignment="BASELINE_LEFT" contentDisplay="RIGHT" graphicTextGap="45.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleFacultyMenuButtonAction" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #353f47;" text="Students Info" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="SansSerif Regular" size="15.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/006-information.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane fx:id="facultycontainer" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="facultyDashboardContainer" layoutX="120.0" layoutY="157.0" prefHeight="540.0" prefWidth="500.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="169.0" layoutY="221.0" text="dashboard" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="facultyApplicatoinsContainer" layoutX="10.0" layoutY="10.0" prefHeight="550.0" prefWidth="696.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <GridPane prefHeight="540.0" prefWidth="696.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="175.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="345.0" minHeight="10.0" prefHeight="345.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <AnchorPane maxHeight="200.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffd37a;">
+                                       <GridPane.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </GridPane.margin>
+                                       <children>
+                                          <Button layoutY="104.0" maxHeight="30.0" mnemonicParsing="false" onAction="#handleSeeApplicationsButtonAction" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #dfb051;" text="See All Applications" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <font>
+                                                <Font name="SansSerif Regular" size="15.0" />
+                                             </font>
+                                          </Button>
+                                          <Label alignment="CENTER" layoutX="55.0" layoutY="56.0" text="Applications" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="55.0">
+                                             <font>
+                                                <Font name="SansSerif Regular" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="applicationCount" layoutX="55.0" layoutY="23.0" text="Count" textFill="WHITE" AnchorPane.leftAnchor="55.0">
+                                             <font>
+                                                <Font name="SansSerif Regular" size="25.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="ApplicationListPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                       <children>
+                                          <GridPane layoutX="153.0" layoutY="58.0" prefHeight="345.0" prefWidth="480.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="220.0" prefHeight="220.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label prefHeight="30.0" prefWidth="200.0" style="-fx-text-fill: #0e5781;" text="Application List:">
+                                                   <font>
+                                                      <Font name="SansSerif Bold" size="15.0" />
+                                                   </font>
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <TableView fx:id="ApplicationTableView" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                                   <columns>
+                                                      <TableColumn fx:id="researchTopicNameF" prefWidth="164.0" text="Topic Name" />
+                                                      <TableColumn fx:id="mem1NameF" prefWidth="82.0" text="Name" />
+                                                      <TableColumn fx:id="mem1IDF" prefWidth="82.0" text="ID" />
+                                                      <TableColumn fx:id="mem2NameF" prefWidth="82.0" text="Name" />
+                                                      <TableColumn fx:id="mem2IDF" prefWidth="82.0" text="ID" />
+                                                      <TableColumn fx:id="mem3NameF" prefWidth="82.0" text="Name" />
+                                                      <TableColumn fx:id="mem3IDF" prefWidth="81.0" text="ID" />
+                                                   </columns>
+                                                </TableView>
+                                                <Button layoutX="529.0" layoutY="310.0" mnemonicParsing="false" onAction="#handleAcceptGroupButtonAction" prefWidth="120.0" style="-fx-background-color: #289b64;" text="Accept Group" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font name="SansSerif Regular" size="12.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                   <GridPane.margin>
+                                                      <Insets right="50.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <Label text="Semester:" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                                       <GridPane.margin>
+                                          <Insets right="200.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="SansSerif Regular" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="semesterComboBoxFT" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                                       <GridPane.margin>
+                                          <Insets right="20.0" />
+                                       </GridPane.margin>
+                                    </ComboBox>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="facultyStudentContainer" layoutX="10.0" layoutY="10.0" prefHeight="560.0" prefWidth="706.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <GridPane prefHeight="540.0" prefWidth="696.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="175.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="345.0" minHeight="10.0" prefHeight="345.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <AnchorPane maxHeight="200.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffd37a;">
+                                       <GridPane.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </GridPane.margin>
+                                       <children>
+                                          <Button layoutY="104.0" maxHeight="30.0" mnemonicParsing="false" onAction="#handleExpandGroupButtonAction" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #dfb051;" text="See All Groups" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <font>
+                                                <Font name="SansSerif Regular" size="15.0" />
+                                             </font>
+                                          </Button>
+                                          <Label alignment="CENTER" layoutX="90.0" layoutY="51.0" text="Groups" textAlignment="CENTER" textFill="WHITE">
+                                             <font>
+                                                <Font name="SansSerif Regular" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="groupCount" layoutX="90.0" layoutY="21.0" text="Count" textFill="WHITE">
+                                             <font>
+                                                <Font name="SansSerif Regular" size="25.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="200.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ff9c59;" GridPane.columnIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </GridPane.margin>
+                                       <children>
+                                          <Button layoutY="105.0" maxHeight="30.0" mnemonicParsing="false" onAction="#handleExpandStudentButtonAction" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #d97c3e;" text="Individual Students" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <font>
+                                                <Font name="SansSerif Regular" size="15.0" />
+                                             </font>
+                                          </Button>
+                                          <Label alignment="CENTER" layoutX="90.0" layoutY="51.0" text="Students" textAlignment="CENTER" textFill="WHITE">
+                                             <font>
+                                                <Font name="SansSerif Regular" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="studentCount" layoutX="90.0" layoutY="21.0" text="Count" textFill="WHITE">
+                                             <font>
+                                                <Font name="SansSerif Regular" size="25.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="groupListPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                       <children>
+                                          <GridPane layoutX="153.0" layoutY="58.0" prefHeight="345.0" prefWidth="480.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="220.0" prefHeight="220.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label prefHeight="30.0" prefWidth="200.0" style="-fx-text-fill: #0e5781;" text="Group List:">
+                                                   <font>
+                                                      <Font name="SansSerif Bold" size="15.0" />
+                                                   </font>
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <TableView fx:id="groupTableView" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                                   <columns>
+                                                      <TableColumn fx:id="groupResearchTopicName" prefWidth="164.0" text="Topic Name" />
+                                                      <TableColumn fx:id="groupMem1Name" prefWidth="82.0" text="Name" />
+                                                      <TableColumn fx:id="groupMem1ID" prefWidth="82.0" text="ID" />
+                                                      <TableColumn fx:id="groupMem2Name" prefWidth="82.0" text="Name" />
+                                                      <TableColumn fx:id="groupMem2ID" prefWidth="82.0" text="ID" />
+                                                      <TableColumn fx:id="groupMem3Name" prefWidth="82.0" text="Name" />
+                                                      <TableColumn fx:id="groupMem3ID" prefWidth="81.0" text="ID" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="individualStudentListPane" layoutX="10.0" layoutY="185.0" prefHeight="200.0" prefWidth="200.0" visible="false" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                       <children>
+                                          <GridPane layoutX="153.0" layoutY="58.0" prefHeight="345.0" prefWidth="480.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="220.0" prefHeight="220.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label prefHeight="30.0" prefWidth="200.0" style="-fx-text-fill: #0e5781;" text="Students Information:" GridPane.halignment="LEFT">
+                                                   <font>
+                                                      <Font name="SansSerif Bold" size="15.0" />
+                                                   </font>
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <TableView fx:id="facultyStudentInfoTableView" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                                   <columns>
+                                                      <TableColumn fx:id="studentResearchTopicName" prefWidth="218.0" text="Topic Name" />
+                                                      <TableColumn fx:id="studentName" prefWidth="218.0" text="Name" />
+                                                      <TableColumn fx:id="studentID" prefWidth="219.0" text="ID" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="chairmanPane" layoutX="10.0" layoutY="10.0" minHeight="600.0" prefHeight="600.0" prefWidth="906.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane fx:id="chairmanLoginPane" minHeight="600.0" prefHeight="600.0" prefWidth="700.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #1fd2a1;" BorderPane.alignment="CENTER" />
+               </top>
+               <bottom>
+                  <AnchorPane prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #1fd2a1;" BorderPane.alignment="CENTER" />
+               </bottom>
+               <center>
+                  <GridPane BorderPane.alignment="CENTER">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <GridPane GridPane.rowIndex="2">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TextField fx:id="chairmanInitialField" alignment="CENTER" maxHeight="40.0" maxWidth="300.0" prefHeight="40.0" prefWidth="300.0" promptText="Chairman Intitials" GridPane.halignment="CENTER">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="15.0" />
+                                 </font>
+                              </TextField>
+                              <PasswordField fx:id="chairmanPassField" alignment="CENTER" maxHeight="40.0" maxWidth="300.0" prefHeight="40.0" prefWidth="300.0" promptText="Password" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="15.0" />
+                                 </font>
+                              </PasswordField>
+                           </children>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="3">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#handleChairmanLoginButtonAction" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #289b64;" text="Login" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#handleChairmanPassForgotButtonAction" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #9b2869;" text="Forgot Password" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button layoutX="10.0" layoutY="65.0" mnemonicParsing="false" onAction="#handleHomeButtonAction" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #287896;" text="Back to Home" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </GridPane>
+                        <Label style="-fx-text-fill: #0e5781;" text="Welcome to CM App" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="SansSerif Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="163.0" layoutY="66.0" style="-fx-text-fill: #8c8c8c;" text="Login as Chairman of XYZ University" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <font>
+                              <Font name="SansSerif Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="chairmanDashboardPane" prefHeight="600.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #2d353c;" BorderPane.alignment="CENTER">
+                     <children>
+                        <GridPane layoutX="350.0" layoutY="15.0" prefHeight="60.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="chairmanNameStatus" alignment="CENTER_RIGHT" minHeight="25.0" prefHeight="25.0" prefWidth="180.0" text="Chairman Name" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <GridPane.margin>
+                                    <Insets right="20.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="530.0" layoutY="15.0" minHeight="25.0" prefHeight="25.0" prefWidth="180.0" text="Chairman" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <GridPane.margin>
+                                    <Insets right="20.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label fx:id="paneStatusChairman" graphicTextGap="10.0" minHeight="25.0" prefHeight="25.0" prefWidth="180.0" style="-fx-text-fill: #0ff0d8;" text="Pane Status" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowSpan="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="16.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="20.0" />
+                                 </GridPane.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/001-menu.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #2d353c;" BorderPane.alignment="CENTER">
+                     <children>
+                        <GridPane layoutX="41.0" layoutY="80.0" minHeight="240.0" prefHeight="240.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Button fx:id="chairmanApplicationsButton" alignment="BASELINE_LEFT" contentDisplay="RIGHT" graphicTextGap="55.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleChairmanMenuButtonAction" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #353f47;" text="Applications" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="SansSerif Regular" size="15.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/008-form.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="chairmanDashboardButton" alignment="BASELINE_LEFT" contentDisplay="RIGHT" graphicTextGap="61.0" layoutY="79.0" mnemonicParsing="false" onAction="#handleChairmanMenuButtonAction" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #353f47;" text="Dashboard" textFill="WHITE" GridPane.halignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="SansSerif Regular" size="15.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/005-dashboard.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="chairmanLogOutButton" alignment="BASELINE_LEFT" contentDisplay="RIGHT" graphicTextGap="83.0" layoutY="133.0" mnemonicParsing="false" onAction="#handleChairmanMenuButtonAction" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #353f47;" text="Log out" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="SansSerif Regular" size="15.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/004-power-button-off.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="setDeadlineButton" alignment="BASELINE_LEFT" contentDisplay="RIGHT" graphicTextGap="50.0" layoutX="20.0" layoutY="80.0" mnemonicParsing="false" onAction="#handleChairmanMenuButtonAction" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #353f47;" text="Set Deadline" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="SansSerif Regular" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/001-check-form.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane fx:id="chairmanContainer" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="chairmanDashboardContainer" layoutX="120.0" layoutY="157.0" prefHeight="540.0" prefWidth="500.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="169.0" layoutY="221.0" text="Chairman Dashboard" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="chairmanApplicatoinsContainer" prefHeight="560.0" prefWidth="706.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <GridPane prefHeight="540.0" prefWidth="696.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="175.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="345.0" minHeight="10.0" prefHeight="345.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <AnchorPane maxHeight="200.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffd37a;">
+                                       <GridPane.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </GridPane.margin>
+                                       <children>
+                                          <Button layoutY="104.0" maxHeight="40.0" mnemonicParsing="false" onAction="#handleExpandApplicationButtonAction" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #dfb051;" text="See All Applications" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <font>
+                                                <Font name="SansSerif Regular" size="15.0" />
+                                             </font>
+                                          </Button>
+                                          <Label alignment="CENTER" layoutX="96.0" layoutY="51.0" text="Aplications" textAlignment="CENTER" textFill="WHITE">
+                                             <font>
+                                                <Font name="SansSerif Regular" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="applicationListPaneFinal" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                       <children>
+                                          <GridPane layoutX="153.0" layoutY="58.0" prefHeight="345.0" prefWidth="480.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="220.0" prefHeight="220.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label prefHeight="30.0" prefWidth="200.0" style="-fx-text-fill: #0e5781;" text="Application List:">
+                                                   <font>
+                                                      <Font name="SansSerif Bold" size="15.0" />
+                                                   </font>
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <TableView fx:id="finalApplicationTableView" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                                   <columns>
+                                                      <TableColumn fx:id="groupResearchTopicNameFinal" prefWidth="82.0" text="Topic Name" />
+                                                      <TableColumn fx:id="groupMem1NameFinal" prefWidth="82.0" text="Name" />
+                                                      <TableColumn fx:id="groupMem1IDFinal" prefWidth="82.0" text="ID" />
+                                                      <TableColumn fx:id="groupMem2NameFinal" prefWidth="82.0" text="Name" />
+                                                      <TableColumn fx:id="groupMem2IDFinal" prefWidth="82.0" text="ID" />
+                                                      <TableColumn fx:id="groupMem3NameFinal" prefWidth="82.0" text="Name" />
+                                                      <TableColumn fx:id="groupMem3IDFinal" prefWidth="82.0" text="ID" />
+                                                      <TableColumn fx:id="groupSupervisorNameFinal" prefWidth="82.0" text="Supervisor" />
+                                                   </columns>
+                                                </TableView>
+                                                <Button fx:id="confirmApplicationFinalButton" mnemonicParsing="false" onAction="#handleConfirmApplicationFinalButtonAction" style="-fx-background-color: #289b64;" text="Confirm Application" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font name="SansSerif Regular" size="12.0" />
+                                                   </font>
+                                                   <GridPane.margin>
+                                                      <Insets right="50.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="30.0" layoutY="30.0" maxHeight="200.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f97bb2;" GridPane.columnIndex="1">
+                                       <children>
+                                          <Button layoutY="104.0" maxHeight="40.0" mnemonicParsing="false" onAction="#handleExpandConfirmedApplicationButtonAction" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #e42a7b;" text="See All Confirmed Applications" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <font>
+                                                <Font name="SansSerif Regular" size="15.0" />
+                                             </font>
+                                          </Button>
+                                          <Label alignment="CENTER" layoutX="47.0" layoutY="51.0" text="Confirmed Aplications" textAlignment="CENTER" textFill="WHITE">
+                                             <font>
+                                                <Font name="SansSerif Regular" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <GridPane.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </GridPane.margin>
+                                    </AnchorPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="deadlineContainer" layoutX="236.0" layoutY="149.0" prefHeight="540.0" prefWidth="696.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <GridPane layoutX="56.0" layoutY="166.0" prefHeight="540.0" prefWidth="696.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <GridPane GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Research Application Deadline:" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets left="50.0" />
+                                             </GridPane.margin>
+                                             <font>
+                                                <Font name="SansSerif Regular" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="49.0" text="Faculty Approval Deadline:" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets left="50.0" />
+                                             </GridPane.margin>
+                                             <font>
+                                                <Font name="SansSerif Regular" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="142.0" text="Application Approval Deadline:" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets left="50.0" />
+                                             </GridPane.margin>
+                                             <font>
+                                                <Font name="SansSerif Regular" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Semester:">
+                                             <GridPane.margin>
+                                                <Insets left="50.0" />
+                                             </GridPane.margin>
+                                             <font>
+                                                <Font name="SansSerif Regular" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <DatePicker fx:id="applicationDeadlineDatePicker" prefWidth="300.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets right="50.0" />
+                                             </GridPane.margin>
+                                          </DatePicker>
+                                          <DatePicker fx:id="facultyApprovalDataPicker" layoutX="338.0" layoutY="103.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets right="50.0" />
+                                             </GridPane.margin>
+                                          </DatePicker>
+                                          <DatePicker fx:id="applicationApprovalDatePicker" layoutX="338.0" layoutY="173.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets right="50.0" />
+                                             </GridPane.margin>
+                                          </DatePicker>
+                                          <ComboBox fx:id="semesterComboBox" prefWidth="150.0" GridPane.halignment="RIGHT">
+                                             <GridPane.margin>
+                                                <Insets right="50.0" />
+                                             </GridPane.margin>
+                                          </ComboBox>
+                                          <GridPane GridPane.columnIndex="1">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="From:" GridPane.halignment="RIGHT">
+                                                   <GridPane.margin>
+                                                      <Insets right="50.0" />
+                                                   </GridPane.margin>
+                                                   <font>
+                                                      <Font name="SansSerif Regular" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="10.0" layoutY="19.0" text="To:" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets right="50.0" />
+                                                   </GridPane.margin>
+                                                   <font>
+                                                      <Font name="SansSerif Regular" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <DatePicker fx:id="semesterFromDatePicker" GridPane.columnIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </DatePicker>
+                                                <DatePicker fx:id="semesterToDatePicker" layoutX="10.0" layoutY="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </DatePicker>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </GridPane>
+                                    <Button mnemonicParsing="false" onAction="#handleApplyDeadlineButtonAction" prefWidth="200.0" style="-fx-background-color: #289b64;" text="Apply" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                                       <GridPane.margin>
+                                          <Insets right="80.0" />
+                                       </GridPane.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
